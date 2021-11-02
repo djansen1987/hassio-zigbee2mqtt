@@ -11,7 +11,7 @@ experimental:
   new_api: true
 ```
 
-Enable `ingress` to have the frontend available in your UI: **Supervisor → Dashboard → Zigbee2mqtt → Show in sidebar**. You can find more details about the feature on the [Zigbee2mqtt documentation](https://www.zigbee2mqtt.io/information/frontend.html).
+Enable `ingress` to have the frontend available in your UI: **Supervisor → Dashboard → Zigbee2mqtt → Show in sidebar**. You can find more details about the feature on the [Zigbee2mqtt documentation](https://www.zigbee2mqtt.io/guide/configuration/webui.html).
 
 # Configuration
 The configuration closely mirrors that of `zigbee2mqtt` itself, with a couple of key differences:
@@ -19,7 +19,7 @@ The configuration closely mirrors that of `zigbee2mqtt` itself, with a couple of
 2. An additional top-level `data-path` option is required. Set this to the path where you would like the add-on to persist data. Defaults to `/share/zigbee2mqtt`. Note that both `config` and `share` directories are mapped into the container (read-write) and are available to you.
 3. If you are using groups or device-specific settings, you must use seperate files, and provide the paths to these files in their corresponding config options as described by the zigbee2mqtt docs. This is due to a limitation Home Assistant places on nested config levels.
 
-See the [zigbee2mqtt configuration docs](https://www.zigbee2mqtt.io/information/configuration.html) for a complete description of available options. If you're not sure if a new option is supported, check to see if it is included in this add-on's default configuration. If not, you can open an issue to add support for it.
+See the [zigbee2mqtt configuration docs](https://www.zigbee2mqtt.io/guide/configuration/) for a complete description of available options. If you're not sure if a new option is supported, check to see if it is included in this add-on's default configuration. If not, you can open an issue to add support for it.
 
 # Configuration backup
 
@@ -35,11 +35,11 @@ zigbee_herdsman_debug: true
 
 
 # Adding Support for New Devices
-If you are interested in [adding support for new devices to zigbee2mqtt](https://www.zigbee2mqtt.io/how_tos/how_to_support_new_devices.html) see methods below
+If you are interested in [adding support for new devices to zigbee2mqtt](https://www.zigbee2mqtt.io/advanced/support-new-devices/01_support_new_devices.html) see methods below
 
 ### Using external_converters
 
-Using `external_converters` option you will have more flexibility to add support but also allow you to maintain a DIY device support. Follow the [documentation](https://www.zigbee2mqtt.io/information/configuration.html#external-converters-configuration) to get started.
+Using `external_converters` option you will have more flexibility to add support but also allow you to maintain a DIY device support. Follow the [documentation](https://www.zigbee2mqtt.io/guide/configuration/more-config-options.html) to get started.
 
 Examples: https://github.com/Koenkk/zigbee2mqtt.io/tree/master/docs/externalConvertersExample
 
